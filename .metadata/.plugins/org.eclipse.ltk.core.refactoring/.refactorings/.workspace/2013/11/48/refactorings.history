@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;MyJ2EEPoroject&apos; to &apos;MyJ2EEProject&apos;" description="Rename resource &apos;MyJ2EEPoroject&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/MyJ2EEPoroject" name="MyJ2EEProject" stamp="1385654894246" updateReferences="true"/>
+</session>

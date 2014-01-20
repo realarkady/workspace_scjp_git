@@ -1,0 +1,6 @@
+INDEX VERSION 1.122+D:\JAVA\workspaces\workspace_scjp\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1341965924.index
+2272721292.index
+3053634896.index
+67847677.index
+1370783349.index
