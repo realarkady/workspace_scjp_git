@@ -1,6 +1,5 @@
 INDEX VERSION 1.126+D:\JAVA\workspaces\workspace_scjp_git\.metadata\.plugins\org.eclipse.jdt.core
 2554062133.index
-1983218713.index
 2441980190.index
 2673221932.index
 3848970444.index
