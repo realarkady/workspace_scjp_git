@@ -1,0 +1,48 @@
+package com.test;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
+public class TestSortCollections {
+
+	public TestSortCollections() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		List s = new ArrayList();
+		s.add("CH12");
+		s.add("CH21");
+		s.add("CH");
+		Collections.sort(s);
+		System.out.println(s);
+		//for (String string : s) {
+		//	System.out.println(string);
+		//}
+		
+		List a = new ArrayList();
+		a.add(new Animal());
+		
+		
+	}
+	
+	class Animal {
+		private int i;
+		
+		public Animal(){}
+		
+		public Animal(int i){
+			this.i = i;
+		}
+		
+		public void setI(int i){
+			this.i=i;
+		}
+		
+		public int getI(){
+			return i;
+		}
+	}
+}
