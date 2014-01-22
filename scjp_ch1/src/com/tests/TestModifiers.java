@@ -1,11 +1,16 @@
 package com.tests;
 
+import java.io.IOError;
+import java.io.IOException;
+
 public class TestModifiers {
 
 	public TestModifiers() {	}
 	
 	public static void main(String[] args) {
 		System.out.println(1);
+		B b = new B();
+		b.myFunc();
 	}
 }
 
@@ -28,7 +33,7 @@ class B extends A{
 		
 	}
 	
-	public void myFunc() throws Error{
+	public void myFunc() throws RuntimeException{
 		
 	}
 }
