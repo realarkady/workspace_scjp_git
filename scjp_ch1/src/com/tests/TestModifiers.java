@@ -5,7 +5,7 @@ public class TestModifiers {
 	public TestModifiers() {	}
 	
 	public static void main(String[] args) {
-		
+		System.out.println(1);
 	}
 }
 
