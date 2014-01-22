@@ -1,9 +1,0 @@
-package com.tests;
-
-public class TestModifiers {
-
-	public TestModifiers() {
-		// TODO Auto-generated constructor stub
-	}
-
-}
