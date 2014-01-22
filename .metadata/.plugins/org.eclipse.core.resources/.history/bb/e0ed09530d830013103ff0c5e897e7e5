@@ -1,0 +1,30 @@
+package com.tests;
+
+public class TestModifiers {
+
+	public TestModifiers() {	}
+	
+	public static void main(String[] args) {
+		
+	}
+}
+
+
+class A{
+	public A(){
+		
+	}
+	
+	public void myFunc(){
+		
+	}
+}
+class B extends A{
+	public B(){
+		
+	}
+	
+	public void myFunc() throws Error{
+		
+	}
+}
