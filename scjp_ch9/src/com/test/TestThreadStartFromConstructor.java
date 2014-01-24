@@ -9,7 +9,7 @@ public class TestThreadStartFromConstructor extends Thread{
 		//if (Thread.currentThread().getName() != "main") {
 			System.out.println(Thread.currentThread().getName());
 			try {
-				Thread.currentThread().join();
+				join();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -23,7 +23,7 @@ public class TestThreadStartFromConstructor extends Thread{
 		Thread t1 = new Thread(t);
 		Thread t2 = new Thread(t);
 		t1.start();
-		t2.start();
+		t1.start();
 	}
 	
 	public void run() {
