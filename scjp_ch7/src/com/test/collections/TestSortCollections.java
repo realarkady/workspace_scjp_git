@@ -1,4 +1,4 @@
-package com.test;
+package com.test.collections;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -8,9 +8,7 @@ import java.util.List;
 
 public class TestSortCollections {
 
-	public TestSortCollections() {
-		// TODO Auto-generated constructor stub
-	}
+	public TestSortCollections() {	}
 
 	public static void main(String[] args) {
 		List s = new ArrayList();

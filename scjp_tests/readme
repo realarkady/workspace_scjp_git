@@ -25,4 +25,3 @@ remote.origin.url=https://github.com/realarkady/workspace_scjp_git.git
 remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 branch.master.remote=origin
 branch.master.merge=refs/heads/master
-1

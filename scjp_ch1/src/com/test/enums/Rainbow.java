@@ -9,7 +9,7 @@ public class Rainbow {
 			this.rgb = rgb;
 		}
 		
-		public int getRGB() {
+		private int getRGB() {
 			return rgb;
 		}
 		
@@ -17,7 +17,16 @@ public class Rainbow {
 	
 	public static void main(String[] args) {
 		MyColor treeColor = MyColor.GREEN;
+		System.out.println(treeColor.getRGB());
+	}
+	
+}
+
+class Rainbow2 {
+	public static void main(String... args) {
+		Rainbow.MyColor treeColor = Rainbow.MyColor.GREEN;
 		System.out.println(treeColor);
+		//System.out.println(treeColor.getRGB()); 	//does not compile
 	}
 	
 }
