@@ -1,5 +1,6 @@
 package com.test;
 
+
 public class TestFinally {
 	
 	public TestFinally() {	}
@@ -16,7 +17,6 @@ public class TestFinally {
 		} finally {
 			System.out.println("finally");
 		}
-		
 		//System.out.println("--- end ---");
 	}
 	
