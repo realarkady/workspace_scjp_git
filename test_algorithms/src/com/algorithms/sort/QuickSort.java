@@ -17,7 +17,6 @@ public class QuickSort {
 	public static void sort(Comparable[] a) {
 		int i = a.length / 2;
 		System.out.println(i);
-
 	}
 
 	public static void bubbleSort(int[] arr) {
