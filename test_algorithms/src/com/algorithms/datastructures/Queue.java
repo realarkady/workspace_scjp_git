@@ -7,19 +7,40 @@ public class Queue {
 	public Queue() {	}
 	
 	public static void main(String[] args) {
-
+		Queue q = new Queue();
+		q.enqueue("1");
+		q.enqueue("2");
+		q.enqueue("3");
+		q.enqueue("4");
+		q.enqueue("5");
+		q.enqueue("6");
+		q.enqueue("7");
+		q.enqueue("8");
+		q.enqueue("1");
+		System.out.println(q.toString());
+		q.dequeue();
+		q.dequeue();
+		q.dequeue();
+		System.out.println(q.toString());
+		
 	}
 	
 	public void enqueue(String value) {
 		if(last == null){
-			last = new Node(value);
+			last = first = new Node(value);
 		} else {
-			
+			//Node node = new Node(value);
+			last.next = new Node(value);
+			last = last.next;
 		}
 	}
 	
 	public Node dequeue() {
-		
+		if(first != null){
+			Node node = first;
+			first = first.next;
+			return node;
+		}
 		return null;
 	}
 	
