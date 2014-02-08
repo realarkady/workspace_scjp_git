@@ -1,12 +1,12 @@
-package com.algorithms.datastructures;
+package com.algorithms.datastructures.generic;
 
-public class LinkedList {
-	public Node head;
+public class LinkedList<T> {
+	public Node<T> head;
 	
 	public LinkedList() {	}
 
 	public static void main(String[] args) {
-		LinkedList l = new LinkedList();
+		LinkedList<String> l = new LinkedList<String>();
 		
 		l.addToTail("1");
 		l.addToTail("2");
@@ -30,12 +30,12 @@ public class LinkedList {
 		
 	}
 	
-	public void addToTail(String value){
+	public void addToTail(T value){
 		if(head == null){
-			head = new Node(value);
+			head = new Node<T>(value);
 		} else {
-			Node node = new Node(value);
-			Node n = head;
+			Node<T> node = new Node<T>(value);
+			Node<T> n = head;
 			while (n.next != null) {
 				n = n.next;
 			}
@@ -43,11 +43,11 @@ public class LinkedList {
 		}
 	}
 	
-	public Node removeNode(String value){
+	public Node<T> removeNode(String value){
 		if(head == null)
 			return null;
 		
-		Node n = head;
+		Node<T> n = head;
 		
 		if(n.value == value){
 			head = n.next;
@@ -56,7 +56,7 @@ public class LinkedList {
 		
 		while(n.next != null){
 			if(n.next.value == value){
-				Node tempN = n.next;
+				Node<T> tempN = n.next;
 				n.next = n.next.next;
 				return tempN;
 			}
@@ -70,7 +70,7 @@ public class LinkedList {
 		if(head == null)
 			return null;
 		StringBuilder sb = new StringBuilder();
-		Node n = head;
+		Node<T> n = head;
 		while(n.next!=null){
 			sb.append(n);
 			sb.append(" -> ");
