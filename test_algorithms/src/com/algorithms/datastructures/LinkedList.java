@@ -7,6 +7,7 @@ public class LinkedList {
 
 	public static void main(String[] args) {
 		LinkedList l = new LinkedList();
+		
 		l.addToTail("1");
 		l.addToTail("2");
 		l.addToTail("3");
