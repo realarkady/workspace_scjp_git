@@ -1,5 +1,6 @@
 package com.algorithms.datastructures;
 
+@Deprecated
 public class Stack {
 	private Node first;
 	public Stack() {	}

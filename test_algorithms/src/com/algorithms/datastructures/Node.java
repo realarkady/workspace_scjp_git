@@ -1,5 +1,6 @@
 package com.algorithms.datastructures;
 
+@Deprecated
 public class Node {
 	public Node next;
 	public String value;

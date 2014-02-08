@@ -1,5 +1,6 @@
 package com.algorithms.datastructures;
 
+@Deprecated
 public class Queue {
 	private Node first;
 	private Node last;
