@@ -29,14 +29,14 @@ public class QuickSort {
 		
 		int pivot = a[first + (last - first)/2];
 		int i = first;
-		int j = last - 1;
+		int j = last;
 		
 		while(i<=j){
-			while(i<pivot){
+			while(a[i] < pivot){
 				i++;
 			}
 			
-			while(j>pivot){
+			while(a[j] > pivot){
 				j--;
 			}
 			
