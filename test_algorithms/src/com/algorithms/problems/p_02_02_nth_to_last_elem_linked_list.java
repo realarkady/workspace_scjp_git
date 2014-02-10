@@ -25,20 +25,23 @@ public class p_02_02_nth_to_last_elem_linked_list {
 		if(lList.head.next == null)
 			return lList.head; 
 		
-		Node<Integer> currentNode = lList.head;
-		Node<Integer> backNode = lList.head;
+		int i = 0;
 		
-		while(currentNode != null){
-			while(backNode.next != currentNode){
-				if(backNode.next.value == currentNode.value){
-					backNode.next = backNode.next.next;
-				}
-				backNode = backNode.next;
-			}
-			currentNode = currentNode.next;
+		//create two pointers:
+		Node<Integer> p1 = lList.head;
+		Node<Integer> p2 = lList.head;
+		
+		while(p1 != null && i < nThToLast){
+			p1 = p1.next;
+			i++;
 		}
 		
-		return null;
+		while(p1 != null){
+			p1 = p1.next;
+			p2 = p2.next;
+		}
+		
+		return p2;
 	}
 	
 }
