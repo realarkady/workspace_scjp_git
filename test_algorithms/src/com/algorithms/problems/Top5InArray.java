@@ -1,5 +1,7 @@
 package com.algorithms.problems;
 
+import javax.rmi.CORBA.Util;
+
 import com.algorithms.datastructures.generic.Utility;
 
 public class Top5InArray {
@@ -19,27 +21,28 @@ public class Top5InArray {
 	
 	public static int[] getTop5(int[] a) {
 		int[] temp = new int[FIVE];
-		for (int i = 0; i < a.length; i++) {
-			for(int j= 0; j<temp.length; j++){
-				if(a[i] > temp[j]){
-					temp[getPositionOfMin(temp)] = a[i];
-					break;
+		int i = 0;
+		
+		//apply insertion sort to bring the five max numbers at start of the array
+		while(i < FIVE){
+			int max = 0;
+			int jMax = 0;
+			for (int j = i; j < a.length; j++) {
+				if(a[j] > max){ //find max
+					max = a[j];
+					jMax = j;
 				}
 			}
+			Utility.swap(a, i, jMax); //bring up front
+			i++;
+		}
+		
+		//populate the output array
+		for (int j = 0; j < FIVE; ++j) {
+			temp[j] = a[j];
 		}
 		
 		return temp;
 	}
 	
-	public static int getPositionOfMin(int[] arr){
-		int min = 0;
-		int minIndex = 0;
-		for (int i = 0; i < arr.length; i++) {
-			if(min < arr[i]){
-				min = arr[i];
-				minIndex = i;
-			}
-		}
-		return minIndex;
-	}
 }
