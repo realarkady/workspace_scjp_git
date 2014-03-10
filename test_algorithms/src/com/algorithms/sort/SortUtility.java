@@ -22,6 +22,12 @@ public class SortUtility {
 		System.out.println();
 	}
 	
+	public static void show(int[] a) {
+		for(int i : a)
+			System.out.print(i + " ");
+		System.out.println();
+	}
+	
 	// is sorted (checks for ascending only)
 	public static boolean isSorted(Comparable[] a) {
 		for(int i = 1; i < a.length; i++)
