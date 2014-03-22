@@ -10,10 +10,13 @@ public class Apple extends Fruit{
 	}
 
 	public static void main(String[] args) {
-		Apple fruit = new Apple();
+		Fruit fruit = (Fruit) new Apple();
 		try {
 			fruit.sayHi();
 		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

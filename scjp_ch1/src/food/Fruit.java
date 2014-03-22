@@ -7,6 +7,9 @@ public abstract class Fruit {
 		System.out.println("Fruit!");
 	}
 	
-	protected abstract void sayHi() throws Exception;
+	//protected abstract void sayHi() throws Exception;
+	protected void sayHi() throws Exception {
+		System.out.println("ih");
+	};
 	
 }
