@@ -14,6 +14,10 @@ public class TestBoxingWideningVarargs {
 		
 		Integer i1 = 127;
 		Integer i2 = 127;
+		
+		double d1 = 5.0;
+		long l1 = 5l;
+		System.out.println("5.0==5l: " + (d1==l1));
 		System.out.println(i1==i2);
 		
 		int i11 = 128;
