@@ -31,6 +31,31 @@ public class Stack<T> {
 		s.pop();
 		s.pop();
 		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
+		s.pop();
 		System.out.println(s.toString());
 	}
 	
@@ -44,13 +69,23 @@ public class Stack<T> {
 		}
 	}
 	
-	public Node<T> pop(){
+	public T pop(){
 		if(first == null)
 			return null;
 		
+		if(first.next == null){
+			T value = first.value;
+			first = null;
+			return value;
+		}
+		
 		Node<T> node = first.next;
 		first = node;
-		return node;
+		return node.value;
+	}
+	
+	public boolean isEmpty(){
+		return first == null;
 	}
 	
 	@Override
