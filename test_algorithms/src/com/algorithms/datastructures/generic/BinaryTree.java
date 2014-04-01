@@ -34,10 +34,12 @@ public class BinaryTree {
 		bTree.insert(12);
 		bTree.insert(1);
 		
+		bTree.find(99);
+		
 	}
 	
-	public void find(int value) {
-		
+	public BTNode find(int value) {
+		return this.findNode(root, value); 
 	}
 	
 	public boolean insert(int value) {
@@ -71,6 +73,24 @@ public class BinaryTree {
 		
 		return false;
 		
+	}
+	
+	public BTNode findNode(BTNode node, int value){
+		if(node.getValue() == value){
+			System.out.println("node found, value: " + value);
+			return node;
+		}
+		
+		if(value < node.getValue() && node.getLeftNode() != null){
+			findNode(node.getLeftNode(), value);
+			return null;
+		} else if(value > node.getValue() && node.getRightNode() != null){
+			findNode(node.getRightNode(), value);
+			return null;
+		}
+		
+		System.out.println("node not found!");
+		return null;
 	}
 	
 	public BTNode getRoot() {
