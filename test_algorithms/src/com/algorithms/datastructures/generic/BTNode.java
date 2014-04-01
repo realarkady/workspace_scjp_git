@@ -1,45 +1,45 @@
 package com.algorithms.datastructures.generic;
 
-public class BTNode<T> {
-	private T value;
-	private BTNode<T> leftNode;
-	private BTNode<T> rightNode;
+public class BTNode {
+	private int value;
+	private BTNode leftNode;
+	private BTNode rightNode;
 	
 	public BTNode() {	}
 	
-	public BTNode(T value) {
+	public BTNode(int value) {
 		super();
 		this.value = value;
 	}
 	
-	public BTNode(T value, BTNode<T> leftNode, BTNode<T> rightNode) {
+	public BTNode(int value, BTNode leftNode, BTNode rightNode) {
 		super();
 		this.value = value;
 		this.leftNode = leftNode;
 		this.rightNode = rightNode;
 	}
 	
-	public T getValue() {
+	public int getValue() {
 		return value;
 	}
 	
-	public void setValue(T value) {
+	public void setValue(int value) {
 		this.value = value;
 	}
 	
-	public BTNode<T> getLeftNode() {
+	public BTNode getLeftNode() {
 		return leftNode;
 	}
 	
-	public void setLeftNode(BTNode<T> leftNode) {
+	public void setLeftNode(BTNode leftNode) {
 		this.leftNode = leftNode;
 	}
 	
-	public BTNode<T> getRightNode() {
+	public BTNode getRightNode() {
 		return rightNode;
 	}
 	
-	public void setRightNode(BTNode<T> rightNode) {
+	public void setRightNode(BTNode rightNode) {
 		this.rightNode = rightNode;
 	}
 	
