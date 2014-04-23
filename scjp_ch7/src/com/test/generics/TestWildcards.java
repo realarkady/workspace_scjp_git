@@ -10,6 +10,14 @@ public class TestWildcards {
 	public TestWildcards() {	}
 	
 	public static void main(String[] args) {
+		int h = 10;
+		h ^= (h >>> 20) ^ (h >>> 12);
+		System.out.println("h: " + h);
+		h = h ^ (h >>> 7) ^ (h >>> 4);
+		System.out.println("h: " + h);
+		System.out.println(309 & 31);
+		//System.out.println(4<<2);
+		
 		TestWildcards tw = new TestWildcards();
 		List<Animal> animals = new ArrayList<Animal>();
 		
@@ -22,7 +30,14 @@ public class TestWildcards {
 		tw.readFromAnimalList(animals);
 		
 		List<? extends Animal> aList1 = new ArrayList<Animal>();
-		List<? super Object> aList2 = new ArrayList<Object>();
+		List<? super Animal> aList2 = new ArrayList<Animal>();
+		
+		//aList1.add(new Animal());
+		//aList2.add(new Animal());
+		//Animal a1 = aList1.get(0);
+		//Animal a2 = aList2.get(0);
+		
+		
 		List<Animal> aList3 = new ArrayList<Animal>();
 		List<Animal> aList4 = new ArrayList<Animal>();
 		List<Animal> aList5 = new ArrayList<Animal>();
