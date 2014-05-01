@@ -13,6 +13,12 @@ public class BinaryTree {
 		super();
 		this.root = root;
 	}
+	
+	public BinaryTree(int rootValue) {
+		super();
+		this.root = new BTNode();
+		root.setValue(rootValue); 
+	}
 
 	public static void main(String[] args) {
 		Set<Integer> set = new HashSet<>();
