@@ -1,8 +1,11 @@
 package com.algorithms.problems;
 
+import java.util.Arrays;
+
 import com.algorithms.datastructures.generic.BinaryTree;
 
 public class p_04_03_tree_from_sorted_array_min_height {
+	static BinaryTree bTree;
 	
 	public p_04_03_tree_from_sorted_array_min_height() {	}
 	
@@ -15,14 +18,27 @@ public class p_04_03_tree_from_sorted_array_min_height {
 		if(isArraySorted(arr) == false)
 			return null;
 		int root = arr[arr.length/2];
-		BinaryTree bTree = new BinaryTree(root);
+		bTree = new BinaryTree(root);
 		
-		for (int i = 0; i < arr.length; i++) {
-			bTree.insert(arr[i]);
-			
-		}
-		bTree.find(arr[arr.length-1]);
 		return bTree;
+	}
+	
+	public static void arrayToBTRecursive(int[] arr) {
+		if(arr.length == 0)
+			return;
+		
+		if(arr.length == 1){
+			bTree.insert(arr[0]);
+			return;
+		}
+		int half = arr.length/2;
+		
+		int[] leftSubArray = Arrays.copyOfRange(arr, 0, half-1);
+		int[] rightSubArray = Arrays.copyOfRange(arr, half, arr.length);
+		
+		arrayToBTRecursive(leftSubArray);
+		arrayToBTRecursive(rightSubArray);
+		
 	}
 	
 	public static boolean isArraySorted(int[] arr) {
