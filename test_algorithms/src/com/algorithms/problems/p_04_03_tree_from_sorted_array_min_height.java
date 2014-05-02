@@ -11,7 +11,7 @@ public class p_04_03_tree_from_sorted_array_min_height {
 	
 	public static void main(String[] args) {
 		int[] arr = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
-		arrayToBT(arr);
+		BinaryTree.print(arrayToBT(arr).getRoot(), 0);
 	}
 	
 	public static BinaryTree arrayToBT(int[] arr) {
@@ -19,6 +19,8 @@ public class p_04_03_tree_from_sorted_array_min_height {
 			return null;
 		int root = arr[arr.length/2];
 		bTree = new BinaryTree(root);
+		
+		arrayToBTRecursive(arr);
 		
 		return bTree;
 	}
@@ -31,14 +33,17 @@ public class p_04_03_tree_from_sorted_array_min_height {
 			bTree.insert(arr[0]);
 			return;
 		}
+		
 		int half = arr.length/2;
+		bTree.insert(arr[half]);
 		
-		int[] leftSubArray = Arrays.copyOfRange(arr, 0, half-1);
-		int[] rightSubArray = Arrays.copyOfRange(arr, half, arr.length);
-		
+		int[] leftSubArray = Arrays.copyOfRange(arr, 0, half);
 		arrayToBTRecursive(leftSubArray);
-		arrayToBTRecursive(rightSubArray);
 		
+		if(half+1 <= arr.length){
+			int[] rightSubArray = Arrays.copyOfRange(arr, half+1, arr.length);
+			arrayToBTRecursive(rightSubArray);
+		}
 	}
 	
 	public static boolean isArraySorted(int[] arr) {

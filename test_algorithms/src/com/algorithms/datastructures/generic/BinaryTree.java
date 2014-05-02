@@ -2,6 +2,8 @@ package com.algorithms.datastructures.generic;
 
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Queue;
+import java.util.LinkedList;
 import java.util.Set;
 
 public class BinaryTree {
@@ -114,6 +116,20 @@ public class BinaryTree {
 		System.out.println("node not found!");
 		return null;
 	}
+	
+	public static void print(BTNode root, int level){
+	    if(root==null)
+	         return;
+	    print(root.getRightNode(), level+1);
+	    if(level!=0){
+	        for(int i=0;i<level-1;i++)
+	            System.out.print("|\t");
+	            System.out.println("|-------"+root.getValue());
+	    }
+	    else
+	        System.out.println(root.getValue());
+	    print(root.getLeftNode(), level+1);
+	}  
 	
 	public BTNode getRoot() {
 		return root;
