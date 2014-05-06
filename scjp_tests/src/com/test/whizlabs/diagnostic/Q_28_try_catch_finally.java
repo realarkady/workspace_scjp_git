@@ -1,15 +1,15 @@
 package com.test.whizlabs.diagnostic;
 
-public class Q_31_try_catch_finally {
+public class Q_28_try_catch_finally {
 
-	public Q_31_try_catch_finally() {	}
+	public Q_28_try_catch_finally() {	}
 	
 	void f() {
 		throw new RuntimeException();
 	}
 	
 	public static void main(String[] args) {
-		Q_31_try_catch_finally t = new Q_31_try_catch_finally();
+		Q_28_try_catch_finally t = new Q_28_try_catch_finally();
 		try {
 			t.f();
 		} catch (Throwable e) {

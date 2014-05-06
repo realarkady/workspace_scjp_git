@@ -15,7 +15,10 @@ public class Q_33_try_catch_finally {
 		} catch (Throwable e) {
 			try {
 				throw (Exception) e; 
-			} catch (Exception ex) {
+			//} catch (RuntimeException ex) {
+			//	System.out.println("RuntimeException catch1");
+			//	return;
+			}catch (Exception ex) {
 				System.out.println("catch1");
 				return;
 			} finally {
