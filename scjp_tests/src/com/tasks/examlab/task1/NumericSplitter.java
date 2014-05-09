@@ -1,4 +1,4 @@
-package com.tasks;
+package com.tasks.examlab.task1;
 
 import java.util.ArrayList;
 import java.util.List;
