@@ -18,6 +18,16 @@ public class DigitalClockRunnable implements Runnable{
 	public void run() {
 		while(true){
 			try {
+				System.out.println("+===+");
+				System.out.println("|   |");
+				System.out.println("|   |");
+				System.out.println("+===+");
+				System.out.println("|   |");
+				System.out.println("|   |");
+				System.out.println("+===+");
+				System.out.println("");
+				System.out.println("");
+				
 				System.out.println(digitalClock.getTime());
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {

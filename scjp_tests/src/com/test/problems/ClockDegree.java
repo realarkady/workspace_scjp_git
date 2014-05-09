@@ -1,9 +1,10 @@
 package com.test.problems;
 
-public final class ClockDegree {
+
+public final class ClockDegree extends Thread implements Cloneable {
 
 	public ClockDegree() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public static void main(String[] args) {
