@@ -1,7 +1,7 @@
 package com.tasks.examlab.task2;
 
 public class DigitalClockRunnable implements Runnable{
-	private DigitalClock digitalClock = new DigitalClock();
+	//private DigitalClock digitalClock = new DigitalClock();
 	
 	public DigitalClockRunnable() {
 		
@@ -18,17 +18,8 @@ public class DigitalClockRunnable implements Runnable{
 	public void run() {
 		while(true){
 			try {
-				System.out.println("+===+");
-				System.out.println("|   |");
-				System.out.println("|   |");
-				System.out.println("+===+");
-				System.out.println("|   |");
-				System.out.println("|   |");
-				System.out.println("+===+");
-				System.out.println("");
-				System.out.println("");
-				
-				System.out.println(digitalClock.getTime());
+				System.out.println();
+				DigitalClock.printTime();
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
