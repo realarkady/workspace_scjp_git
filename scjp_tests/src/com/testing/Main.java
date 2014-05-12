@@ -11,7 +11,7 @@ public class Main {
 		BClass ibCclass = new CClass();
 		ibCclass.iMethod();
 		
-		System.out.println((new Integer(5)) == (new Integer(5)));
+		System.out.println(new Integer(5).equals(new Integer(5)));
 		System.out.println("--- Finish ---");
 	}
 	
