@@ -1,32 +1,41 @@
 package com.algorithms.problems;
 
+import java.util.ArrayList;
+
 public class p_08_04_string_permutation {
 
 	public p_08_04_string_permutation() {	}
 	
 	public static void main(String[] args) {
-		printPar(3);
+		getPerms("abcdefgh");
 	}
 	
-	public static void printPar(int count) {
-		char[] str = new char[count * 2];
-		printPar(count, count, str, 0);
-	}
-	
-	public static void printPar(int l, int r, char[] str, int count) {
-		if(l < 0 || r < l) return; //invalid state
-		if(l == 0 && r == 0) {
-			System.out.println(str);
-		} else {
-			if(l > 0){ // try a left paren, if there are some available
-				str[count] = '(';
-				printPar(l - 1, r, str, count + 1);
-			}
-			if(r > 0){
-				str[count] = ')';
-				printPar(l, r - 1, str, count + 1);
+	public static ArrayList<String> getPerms(String s) {
+		ArrayList<String> permutations = new ArrayList<String>();
+		if (s == null) { // error case
+			return null;
+		} else if (s.length() == 0) { // base case
+			permutations.add("");
+			return permutations;
+		}
+		
+		char first = s.charAt(0); // get the first character
+		String remainder = s.substring(1); // remove the first character
+		ArrayList<String> words = getPerms(remainder);
+		
+		for (String word : words) {
+			for (int j = 0; j <= word.length(); j++) {
+				permutations.add(insertCharAt(word, first, j));
 			}
 		}
+		System.out.println(permutations);
+		return permutations;
+	}
+	
+	public static String insertCharAt(String word, char c, int i) {
+		String start = word.substring(0, i);
+		String end = word.substring(i);
+		return start + c + end;
 	}
 	
 }
