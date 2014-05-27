@@ -66,6 +66,8 @@ public class GraphTest {
 		//gt.bfs(15);
 		gt.dfs(5);
 		
+		int i = 40 * 2100000000;
+		System.out.println(i); 
 	}
 	
 }
