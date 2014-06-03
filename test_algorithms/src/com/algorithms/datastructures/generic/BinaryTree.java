@@ -60,6 +60,8 @@ public class BinaryTree {
 		
 		bTree.find(99);
 		
+		print(bTree.getRoot(), 0); 
+		bTree.traversePreorder(bTree.getRoot());
 	}
 	
 	public BTNode find(int value) {
@@ -115,6 +117,33 @@ public class BinaryTree {
 		
 		System.out.println("node not found!");
 		return null;
+	}
+
+	public void traversePreorder(BTNode node){
+		System.out.println(node.getValue());
+		
+		if (node.getLeftNode() != null) {
+			traversePreorder(node.getLeftNode());
+		}
+		
+		if (node.getRightNode() != null) {
+			traversePreorder(node.getRightNode());
+		}
+		
+	}
+
+	public void traversePreorderIterative(BTNode node){
+		
+		System.out.println(node.getValue());
+		
+		if (node.getLeftNode() != null) {
+			traversePreorder(node.getLeftNode());
+		}
+		
+		if (node.getRightNode() != null) {
+			traversePreorder(node.getRightNode());
+		}
+		
 	}
 	
 	public static void print(BTNode root, int level){

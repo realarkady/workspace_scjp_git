@@ -7,7 +7,7 @@ public class p_08_04_string_permutation {
 	public p_08_04_string_permutation() {	}
 	
 	public static void main(String[] args) {
-		getPerms("abcdefgh");
+		getPerms("abcdefghi");
 	}
 	
 	public static ArrayList<String> getPerms(String s) {
