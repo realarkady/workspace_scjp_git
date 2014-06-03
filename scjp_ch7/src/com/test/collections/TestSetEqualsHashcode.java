@@ -6,24 +6,23 @@ import java.util.Set;
 public class TestSetEqualsHashcode {
 
 	public static void main(String[] args) {
-		Set<NameObject> set = new HashSet<NameObject>();
+		Set<Person> set = new HashSet<Person>();
 		
-		NameObject o1 = new NameObject("ion");
-		NameObject o2 = new NameObject("ion2");
-		System.out.println(o1.equals(o2));
+		Person p1 = new Person("John");
+		Person p2 = new Person("John");
+		System.out.println(p1.equals(p2));
 		
-		set.add(o1);
-		set.add(o2);
+		set.add(p1);
+		set.add(p2);
 		System.out.println(set.size());
 	}
 
 }
 
-
-class NameObject {
-	String name;
+class Person {
+	private String name;
 	
-	public NameObject(String name) {
+	public Person(String name) {
 		this.name = name;
 	}
 	
@@ -34,13 +33,13 @@ class NameObject {
 	
 	@Override
 	public boolean equals(Object obj) {
-		if(obj == null || ! (obj instanceof MyObject))
+		if(obj == null || ! (obj instanceof Person))
 			return false;
 		
 		if(this == obj)
 			return true;
 		
-		return this.name == ((MyObject) obj).getName();
+		return this.name == ((Person) obj).getName();
 	}
 	
 	public String getName() {
