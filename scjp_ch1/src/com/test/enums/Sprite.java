@@ -15,5 +15,10 @@ class Nav {
 	public static void main(String[] args) {
 		Direction d = Direction.SOUTH;
 		System.out.println(d);
+		switch (d) {
+		case SOUTH:	System.out.println(d);
+		default: System.out.println("default");
+		case NORTH:	System.out.println(Direction.NORTH);
+		}
 	}
 }

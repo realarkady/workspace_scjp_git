@@ -1,5 +1,5 @@
 package com.test.enums;
-
+import com.test.enums.Nav;
 public class Rainbow {
 	public enum MyColor {
 		RED(0xff0000), GREEN(0x00ff00), BLUE(0x0000ff);
@@ -16,6 +16,7 @@ public class Rainbow {
 	};
 	
 	public static void main(String[] args) {
+		System.out.println(Nav.Direction.NORTH);
 		MyColor treeColor = MyColor.GREEN;
 		System.out.println(treeColor.getRGB());
 	}
