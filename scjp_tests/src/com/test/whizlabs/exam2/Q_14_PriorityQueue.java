@@ -10,5 +10,6 @@ public class Q_14_PriorityQueue {
 		pq.add("apple");
 		System.out.println(pq);
 		System.out.println(pq.poll() + " " + pq.peek());
+		System.out.println(pq.size());
 	}
 }
