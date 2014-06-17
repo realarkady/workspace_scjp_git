@@ -1,6 +1,6 @@
 package com.test.whizlabs.exam2;
 
-public class Q_38_tricky_switch_case {
+public class Q_45_tricky_switch_case {
 	public static void main(String[] args) {
 		float i = 0;
 		final byte j = 5;
