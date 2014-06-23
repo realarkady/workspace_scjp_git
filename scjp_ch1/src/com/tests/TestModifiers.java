@@ -1,12 +1,10 @@
 package com.tests;
 
-import java.io.IOError;
-import java.io.IOException;
-
 public class TestModifiers {
 
-	public TestModifiers() {	}
-	
+	public TestModifiers() {
+	}
+
 	public static void main(String[] args) {
 		System.out.println(1);
 		B b = new B();
@@ -14,26 +12,26 @@ public class TestModifiers {
 	}
 }
 
+class A {
+	public A() {
 
-class A{
-	public A(){
-		
 	}
-	
-	public void myFunc(){
-		
+
+	public void myFunc() {
+
 	}
 }
-class B extends A{
-	public B(){
+
+class B extends A {
+	public B() {
 		this(1);
 	}
-	
-	public B(int i){
-		
+
+	public B(int i) {
+
 	}
-	
-	public void myFunc() throws RuntimeException{
-		
+
+	public void myFunc() throws RuntimeException {
+
 	}
 }
